@@ -331,7 +331,8 @@ pre code {
 }
 
 blockquote {
-  font-family: "{{ .Site.Params.fontblockquote }}";
+  font-family: "{{ .Site.Params.fontblockquote }}", serif;
+  font-style: italic;
   border-left: 2px solid var(--light-secondary-color);
   color: grey;
   padding-left: 1rem;
