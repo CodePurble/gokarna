@@ -20,6 +20,13 @@
   src: url("/fonts/Lato-Bold.ttf");
 }
 
+@font-face {
+  /*Set the fontblockquote and fontblockquoteURL parameters in config.toml to change this font*/
+  font-family: "{{ .Site.Params.fontblockquote }}";
+  font-weight: 400;
+  src: url("{{ .Site.Params.fontblockquoteURL }}");
+}
+
 html {
   background-color: rgb(var(--light-primary-color));
   color: var(--light-text-color);
@@ -324,6 +331,7 @@ pre code {
 }
 
 blockquote {
+  font-family: "{{ .Site.Params.fontblockquote }}";
   border-left: 2px solid var(--light-secondary-color);
   color: grey;
   padding-left: 1rem;
@@ -588,3 +596,4 @@ table td {
   height: 1px;
   overflow: hidden;
 }
+

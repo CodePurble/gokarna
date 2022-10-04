@@ -1,11 +1,25 @@
 # Gokarna
 
-Gokarna is an opinionated theme with a focus on minimalism and simplicity.
+Gokarna is an opinionated theme with a focus on minimalism and simplicity. This
+fork allows font modifications by setting special parameters in `config.toml`.
+
+To set the font used in blockquotes, the following parameters need to be set:
+```toml
+[params]
+    # URL can also be a path to a font file
+    fontblockquoteURL = "https://fonts.googleapis.com/css2?family=Playfair+Display"
+    fontblockquote = "Playfair" # Use font-family name corresponding to the font in the URL here
+```
+
 
 ### Authors:
 
 1. [Yash Mehrotra](https://yashmehrotra.com)
 2. [Avijit Gupta](https://twitter.com/526avijit)
+
+### Modified by:
+
+[Ramprakash](https://github.com/CodePurble)
 
 ### Demo: [https://gokarna-hugo.netlify.app](https://gokarna-hugo.netlify.app)
 
