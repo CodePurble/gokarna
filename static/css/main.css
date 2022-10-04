@@ -6,31 +6,34 @@
   --light-secondary-color: #dddddd;
   --light-tertiary-color: #272822;
   --light-text-color: black;
+
+  --fontblockquote-url: "https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap";
+  --fontblockquote-family: "Playfair Display";
+  --fontblockquote-serif: serif;
+  --fontblockquote-weight: 400;
+
+  --fontmain-url: "https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap";
+  --fontmain-family: "Noto Sans";
+  --fontmain-serif: sans-serif;
+  --fontmain-weight: 400;
 }
 
 @font-face {
-  font-family: Lato;
-  font-weight: 400;
-  src: url("/fonts/Lato-Regular.ttf");
+  font-family: var(--fontmain-family);
+  font-weight: var(--fontmain-weight);
+  src: url(var(--fontmain-url));
 }
 
 @font-face {
-  font-family: Lato;
-  font-weight: 700;
-  src: url("/fonts/Lato-Bold.ttf");
-}
-
-@font-face {
-  /*Set the fontblockquote and fontblockquoteURL parameters in config.toml to change this font*/
-  font-family: "{{ .Site.Params.fontblockquote }}";
-  font-weight: 400;
-  src: url("{{ .Site.Params.fontblockquoteURL }}");
+  font-family: var(--fontblockquote-family);
+  font-weight: var(--fontblockquote-weight);
+  src: url(var(--fontblockquote-url));
 }
 
 html {
   background-color: rgb(var(--light-primary-color));
   color: var(--light-text-color);
-  font-family: "Lato", sans-serif;
+  font-family: var(--fontmain-family), var(--fontmain-serif);
   font-size: 17.5px;
   min-height: 100%;
   position: relative;
@@ -331,8 +334,7 @@ pre code {
 }
 
 blockquote {
-  font-family: "{{ .Site.Params.fontblockquote }}", serif;
-  font-style: italic;
+  font-family: var(--fontblockquote-family), var(--fontblockquote-serif);
   border-left: 2px solid var(--light-secondary-color);
   color: grey;
   padding-left: 1rem;

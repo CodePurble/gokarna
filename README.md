@@ -1,16 +1,36 @@
 # Gokarna
 
 Gokarna is an opinionated theme with a focus on minimalism and simplicity. This
-fork allows font modifications by setting special parameters in `config.toml`.
+fork allows font modifications by setting the appropriate variables in
+`static/css/main.css`
 
-To set the font used in blockquotes, the following parameters need to be set:
-```toml
-[params]
-    # URL can also be a path to a font file
-    fontblockquoteURL = "https://fonts.googleapis.com/css2?family=Playfair+Display"
-    fontblockquote = "Playfair" # Use font-family name corresponding to the font in the URL here
+To set the font used in blockquotes, the following variables need to be set:
+```css
+/* URL can also be a filepath to a downloaded font (put it in static/fonts) */
+--fontblockquote-url: "https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap";
+/* font family name */
+--fontblockquote-family: "Playfair Display";
+/* serif/sans-serif */
+--fontblockquote-serif: serif;
+/* default font weight */
+--fontblockquote-weight: 400;
 ```
 
+To set the font used in the rest of the site, the following variables need to
+be set:
+```css
+/* URL can also be a filepath to a downloaded font (put it in static/fonts) */
+--fontmain-url: "https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap";
+/* font family name */
+--fontmain-family: "Playfair Display";
+/* serif/sans-serif */
+--fontmain-serif: serif;
+/* default font weight */
+--fontmain-weight: 400;
+```
+
+To propagate font changes, reload the page using <kbd>Shift</kbd> +
+<kbd>Ctrl</kbd> + <kbd>r</kbd>
 
 ### Authors:
 
