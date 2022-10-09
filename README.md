@@ -14,6 +14,8 @@ To set the font used in blockquotes, the following variables need to be set:
 --fontblockquote-serif: serif;
 /* default font weight */
 --fontblockquote-weight: 400;
+/* default font style */
+--fontblockquote-style: italic;
 ```
 
 To set the font used in the rest of the site, the following variables need to
@@ -27,6 +29,8 @@ be set:
 --fontmain-serif: serif;
 /* default font weight */
 --fontmain-weight: 400;
+/* default font style */
+--fontmain-style: normal;
 ```
 
 To propagate font changes, reload the page using <kbd>Shift</kbd> +

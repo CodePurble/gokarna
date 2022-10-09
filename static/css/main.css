@@ -11,11 +11,13 @@
   --fontblockquote-family: "Playfair Display";
   --fontblockquote-serif: serif;
   --fontblockquote-weight: 400;
+  --fontblockquote-style: italic;
 
   --fontmain-url: "https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap";
   --fontmain-family: "Noto Sans";
   --fontmain-serif: sans-serif;
   --fontmain-weight: 400;
+  --fontmain-style: normal;
 }
 
 @font-face {
@@ -34,6 +36,7 @@ html {
   background-color: rgb(var(--light-primary-color));
   color: var(--light-text-color);
   font-family: var(--fontmain-family), var(--fontmain-serif);
+  font-style: var(--fontmain-style);
   font-size: 17.5px;
   min-height: 100%;
   position: relative;
@@ -335,6 +338,7 @@ pre code {
 
 blockquote {
   font-family: var(--fontblockquote-family), var(--fontblockquote-serif);
+  font-style: var(--fontblockquote-style);
   border-left: 2px solid var(--light-secondary-color);
   color: grey;
   padding-left: 1rem;
